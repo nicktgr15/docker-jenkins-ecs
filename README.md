@@ -2,6 +2,8 @@
 
 A jenkins docker container that can be used with the AWS EC2 Container Service (ECS).
 
+Docker hub: https://registry.hub.docker.com/u/nicktgr15/docker-jenkins-ecs/
+
 ## Example Task Definition
 
 ```
