@@ -10,12 +10,12 @@ RUN pip install awscli
 
 USER jenkins
 
-git config --global credential.helper '!aws codecommit credential-helper $@'
-git config --global credential.useHttpPath true
-git config --global user.email "me@mycompany.com"
-git config --global user.name "MyJenkinsServer"
+RUN git config --global credential.helper '!aws codecommit credential-helper $@'
+RUN git config --global credential.useHttpPath true
+RUN git config --global user.email "me@mycompany.com"
+RUN git config --global user.name "MyJenkinsServer"
 
-mdkir /var/jenkins_home/.aws
-echo "[default]" >> /var/jenkins_home/.aws/credentials
-echo "output = json" >> /var/jenkins_home/.aws/credentials
-echo "region = us-east-1" >> /var/jenkins_home/.aws/credentials
+RUN mdkir /var/jenkins_home/.aws
+RUN echo "[default]" >> /var/jenkins_home/.aws/credentials
+RUN echo "output = json" >> /var/jenkins_home/.aws/credentials
+RUN echo "region = us-east-1" >> /var/jenkins_home/.aws/credentials
