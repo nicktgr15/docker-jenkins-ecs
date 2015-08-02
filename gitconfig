@@ -1,0 +1,6 @@
+[credential]
+	helper = !aws codecommit credential-helper $@
+	useHttpPath = true
+[user]
+	email = me@mycompany.com
+	name = MyJenkinsServer

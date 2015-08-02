@@ -10,9 +10,5 @@ RUN pip install awscli
 
 USER jenkins
 
-RUN git config --global credential.helper '!aws codecommit credential-helper $@'
-RUN git config --global credential.useHttpPath true
-RUN git config --global user.email "me@mycompany.com"
-RUN git config --global user.name "MyJenkinsServer"
-
+COPY gitconfig /var/jenkins_home/.gitconfig
 COPY credentials /var/jenkins_home/.aws/credentials
