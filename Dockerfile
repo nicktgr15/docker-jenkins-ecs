@@ -15,7 +15,4 @@ RUN git config --global credential.useHttpPath true
 RUN git config --global user.email "me@mycompany.com"
 RUN git config --global user.name "MyJenkinsServer"
 
-RUN mkdir /var/jenkins_home/.aws
-RUN echo "[default]" >> /var/jenkins_home/.aws/credentials
-RUN echo "output = json" >> /var/jenkins_home/.aws/credentials
-RUN echo "region = us-east-1" >> /var/jenkins_home/.aws/credentials
+COPY credentials /var/jenkins_home/.aws/credentials
