@@ -7,7 +7,7 @@ RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 RUN apt-get update
 RUN apt-get install python-pip -y
 RUN pip install awscli
-RUN pip install boto
+RUN pip install boto3
 
 USER jenkins
 
