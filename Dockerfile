@@ -9,6 +9,9 @@ RUN apt-get install python-pip -y
 RUN pip install awscli
 RUN pip install boto3
 
+COPY deploy.py /usr/bin/deploy
+RUN chmod +x /usr/bin/deploy
+
 USER jenkins
 
 COPY gitconfig /var/jenkins_home/.gitconfig
