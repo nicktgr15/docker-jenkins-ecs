@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get install python-pip -y
 RUN pip install awscli
 RUN pip install boto3
+RUN pip install virtualenv
 
 COPY deploy.py /usr/bin/deploy
 RUN chmod +x /usr/bin/deploy
